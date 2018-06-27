@@ -49,11 +49,11 @@
   <div class="container">
     <div class="section">
 
-      <div class="row center">
-        <h3> 1 USD = 365 Naira </h3>
+      <div id="conversion_display" class="row center hide">
+        <h3></h3>
       </div>
 
-      <div class="row center">
+      <div id="loader" class="row center hide">
         <div class="preloader-wrapper big active">
           <div class="spinner-layer spinner-orange" style="border-color: orange">
             <div class="circle-clipper left">
@@ -73,10 +73,7 @@
         <div class="col s12 m6">
           <div class="input-field col s12 m8 offset-m2">
             <select id="currency_1" class="currency_select">
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
+              <option value="" disabled selected>Select currency</option>
             </select>
             <label>From</label>
           </div>
@@ -86,10 +83,7 @@
         <div class="col s12 m6">
           <div class="input-field col s12 m8 offset-m2">
             <select id="currency_2" class="currency_select">
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
+              <option value="" disabled selected>Select currency</option>
             </select>
             <label>To</label>
           </div>
@@ -97,7 +91,7 @@
       </div>
 
       <div class="row center">
-        <button class="waves-effect waves-light btn-large orange">
+        <button onClick="convert()" class="waves-effect waves-light btn-large orange">
           <i class="material-icons left">repeat</i>Convert</button>
       </div>
 
@@ -117,9 +111,10 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="./js/materialize.js"></script>
-  <script src="./js/init.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="js/materialize.js"></script>
+  <!-- <script src="js/init.js"></script> -->
+  <script src="js/main.js"></script>
+  <script src="js/sw.js"></script>
 
 </body>
 
