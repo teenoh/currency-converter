@@ -1,9 +1,9 @@
 let cache = "converter";
-let version = "2";
+let version = "6";
 let cacheName = `${cache}_${version}`;
 let filesToCache = [
-  "/currency-converter/",
-  //"/",
+  //"/currency-converter/",
+  "/",
   "css/style.css",
   "css/materialize.css",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
