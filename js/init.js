@@ -1,5 +1,7 @@
 (function($) {
   $(function() {
+    M.AutoInit();
+
     $(".sidenav").sidenav();
     $("select").formSelect();
 

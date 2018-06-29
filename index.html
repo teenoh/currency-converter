@@ -10,12 +10,24 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log("[Service Worker] successfully register"))
+        .catch(() => console.log("[Service Worker] An error occured"))
+    } else {
+      console.log("an error occured")
+    }
+  </script>
+
 </head>
 
 <body>
   <nav class="orange lighten-1" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><i class="large material-icons left">repeat</i></a>
+      <a id="logo-container" href="#" class="brand-logo">
+        <i class="large material-icons left">repeat</i>
+      </a>
       <ul class="right hide-on-med-and-down">
         <li>
           <a href="#">Navbar Link</a>
@@ -50,7 +62,7 @@
     <div class="section">
 
       <div id="conversion_display" class="row center hide">
-        <h3></h3>
+
       </div>
 
       <div id="loader" class="row center hide">
@@ -90,6 +102,26 @@
         </div>
       </div>
 
+      <!--  -->
+
+
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="input-field col s12 m8 offset-m2">
+            <input id="amount" type="text" class="validate">
+            <label for="amount">Amount</label>
+          </div>
+        </div>
+
+
+        <div class="col s12 m6">
+          <div class="input-field col s12 m8 offset-m2">
+            <input id="result" disabled type="number">
+            <label for="result">Result</label>
+          </div>
+        </div>
+      </div>
+
       <div class="row center">
         <button onClick="convert()" class="waves-effect waves-light btn-large orange">
           <i class="material-icons left">repeat</i>Convert</button>
@@ -114,6 +146,9 @@
   <script src="js/materialize.js"></script>
   <!-- <script src="js/init.js"></script> -->
   <script src="js/main.js"></script>
+
+
+
   <script src="js/sw.js"></script>
 
 </body>
