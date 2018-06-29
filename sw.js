@@ -1,14 +1,15 @@
 let cache = "converter";
-let version = "6";
+let version = "1";
 let cacheName = `${cache}_${version}`;
 let filesToCache = [
   "/currency-converter/",
+  "/manifest.json",
   //"/",
-  "css/style.css",
-  "css/materialize.css",
+  "assets/transfer-512.png",
+  "css/materialize.min.css",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
   "https://code.jquery.com/jquery-2.1.1.min.js",
-  "js/materialize.js",
+  "js/materialize.min.js",
   "js/main.js",
   "js/idb.js",
   "https://free.currencyconverterapi.com/api/v5/currencies"

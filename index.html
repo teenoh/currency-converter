@@ -7,20 +7,10 @@
   <title>Starter Template - Materialize</title>
 
   <!-- CSS  -->
+  <link rel="manifest" href="/manifest.json">
   <link rel="canonical" href="https://teenoh.github.io/currency-converter/" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <script type="text/javascript">
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register(`${window.location.pathname}sw.js`)
-        .then(() => console.log("[Service Worker] successfully register"))
-        .catch(() => console.log("[Service Worker] An error occured"))
-    } else {
-      console.log("an error occured")
-    }
-  </script>
-
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
@@ -144,12 +134,19 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
+  <script src="js/materialize.min.js"></script>
   <!-- <script src="js/init.js"></script> -->
   <script src="js/idb.js"></script>
   <script src="js/main.js"></script>
-
-
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(`${window.location.pathname}sw.js`)
+        .then(() => console.log("[Service Worker] successfully register"))
+        .catch(() => console.log("[Service Worker] An error occured"))
+    } else {
+      console.log("an error occured")
+    }
+  </script>
 
 </body>
 
