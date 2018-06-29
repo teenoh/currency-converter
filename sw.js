@@ -3,14 +3,18 @@ let version = "2";
 let cacheName = `${cache}_${version}`;
 let filesToCache = [
   "/currency-converter/",
+  //"/",
   "css/style.css",
   "css/materialize.css",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
   "https://code.jquery.com/jquery-2.1.1.min.js",
   "js/materialize.js",
   "js/main.js",
+  "js/idb.js",
   "https://free.currencyconverterapi.com/api/v5/currencies"
 ];
+
+
 
 self.addEventListener("install", event => {
   console.log("[Service Worker] installing ");
@@ -24,7 +28,7 @@ self.addEventListener("install", event => {
 });
 
 self.addEventListener("fetch", event => {
-  console.log(event.request.url)
+  //console.log(event.request.url)
 
   event.respondWith(
     caches.match(event.request).then(response => {
