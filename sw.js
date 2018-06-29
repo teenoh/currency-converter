@@ -19,7 +19,7 @@ self.addEventListener("install", event => {
     caches.open(cacheName).then(cache => {
       console.log("[Service Worker] caching all files");
       cache.addAll(filesToCache);
-    })
+    }).catch(err => console.log("error occured in caching files ==> ",err))
   );
 });
 
