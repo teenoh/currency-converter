@@ -2,7 +2,7 @@
     "name": "Ego Converter",
     "short_name": "EgoConv",
     "start_url": ".",
-    "display": "fullscreen",
+    "display": "standalone",
     "background_color": "#F8B500",
     "icons": [
         {
