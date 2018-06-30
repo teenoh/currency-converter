@@ -1,12 +1,13 @@
 let cache = "converter";
-let version = "2.1.0";
+let version = "2.1.2";
 let cacheName = `${cache}_${version}`;
 let filesToCache = [
   "/currency-converter/",
   "/currency-converter/index.html",
   "./manifest.json",
   //"/",
-  "./assets/transfer-512.png",
+  "./transfer-512.png",
+  "./transfer-192.png",
   "./css/materialize.min.css",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
   "https://code.jquery.com/jquery-2.1.1.min.js",

@@ -6,12 +6,12 @@
     "background_color": "#F8B500",
     "icons": [
         {
-            "src": "/assets/transfer-512.png",
+            "src": "transfer-512.png",
             "type": "image/png",
             "sizes": "512x512"
         },
         {
-            "src": "/assets/transfer-192.png",
+            "src": "transfer-192.png",
             "type": "image/png",
             "sizes": "192x192"
         }
