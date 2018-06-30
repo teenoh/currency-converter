@@ -1,8 +1,9 @@
 let cache = "converter";
-let version = "2.0.5";
+let version = "2.0.6";
 let cacheName = `${cache}_${version}`;
 let filesToCache = [
   "/currency-converter/",
+  "./index.html",
   "/manifest.json",
   //"/",
   "assets/transfer-512.png",
