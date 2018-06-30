@@ -1,18 +1,18 @@
 let cache = "converter";
-let version = "2.0.6";
+let version = "2.1.0";
 let cacheName = `${cache}_${version}`;
 let filesToCache = [
   "/currency-converter/",
-  "./index.html",
-  "/manifest.json",
+  "/currency-converter/index.html",
+  "./manifest.json",
   //"/",
-  "assets/transfer-512.png",
-  "css/materialize.min.css",
+  "./assets/transfer-512.png",
+  "./css/materialize.min.css",
   "https://fonts.googleapis.com/icon?family=Material+Icons",
   "https://code.jquery.com/jquery-2.1.1.min.js",
-  "js/materialize.min.js",
-  "js/main.js",
-  "js/idb.js",
+  "./js/materialize.min.js",
+  "./js/main.js",
+  "./js/idb.js",
   "https://free.currencyconverterapi.com/api/v5/currencies"
 ];
 
@@ -25,7 +25,7 @@ self.addEventListener("install", event => {
     caches.open(cacheName).then(cache => {
       console.log("[Service Worker] caching all files");
       cache.addAll(filesToCache);
-    }).catch(err => console.log("error occured in caching files ==> ",err))
+    }).then(() => self.skipWaiting()).catch(err => console.log("error occured in caching files ==> ",err))
   );
 });
 
