@@ -1,0 +1,14 @@
+{
+    "name": "Ego Converter",
+    "short_name": "EgoConv",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#F8B500",
+    "icons": [
+        {
+            "src": "/assets/transfer-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
