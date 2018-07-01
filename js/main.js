@@ -141,20 +141,18 @@ let convert = () => {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-  M.AutoInit();
-  if (!navigator.onLine) {
-    console.log("offline")
-    M.toast({
-      html: "You are offline!. Working in offline mode"
-    });
-  }
-
   fetch(`${API_URL}/currencies`)
     .then(res => res.json())
     .then(res => {
       currency_list = res.results;
       updateSelect(currency_list);
       M.AutoInit();
+      
+      if (!navigator.onLine) {
+        M.toast({
+          html: "You are offline!. Working in offline mode"
+        });
+      }
       return;
     })
     .catch(err => {
