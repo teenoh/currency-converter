@@ -1,7 +1,7 @@
 {
     "name": "Ego Converter",
     "short_name": "EgoConv",
-    "start_url": ".",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#F8B500",
     "icons": [

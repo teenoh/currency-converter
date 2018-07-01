@@ -1,11 +1,11 @@
 let cache = "converter";
-let version = "2.1.5";
+let version = "2.1.8";
 let cacheName = `${cache}_${version}`;
 let filesToCache = [
-  "/currency-converter/",
-  "/currency-converter/index.html",
+  //"/currency-converter/",
+  //"/currency-converter/index.html",
   "./manifest.json",
-  //"/",
+  "/",
   "./transfer-512.png",
   "./transfer-192.png",
   "./css/materialize.min.css",
@@ -17,16 +17,17 @@ let filesToCache = [
   "https://free.currencyconverterapi.com/api/v5/currencies"
 ];
 
-
-
 self.addEventListener("install", event => {
   console.log("[Service Worker] installing ");
 
   event.waitUntil(
-    caches.open(cacheName).then(cache => {
-      console.log("[Service Worker] caching all files");
-      cache.addAll(filesToCache);
-    }).then(() => self.skipWaiting()).catch(err => console.log("error occured in caching files ==> ",err))
+    caches
+      .open(cacheName)
+      .then(cache => {
+        console.log("[Service Worker] caching all files");
+        cache.addAll(filesToCache);
+      })
+      .then(() => self.skipWaiting())
   );
 });
 
@@ -35,7 +36,7 @@ self.addEventListener("fetch", event => {
 
   event.respondWith(
     caches.match(event.request).then(response => {
-      return response || fetch(event.request)
+      return response || fetch(event.request);
     })
   );
 });
@@ -47,7 +48,6 @@ self.addEventListener("activate", event => {
         keyList.map(key => {
           if (key !== cacheName) {
             caches.delete(key);
-            console.log(`deleted ${key}`)
           }
         })
       );
